@@ -8,9 +8,8 @@ public class Student : Person
     private DateTime birthDate;
     private double avgScore;
 
-    public Student(int number, string firstName, string lastName, DateTime birthDate, double avgScore) : base($"{firstName} {lastName}", birthDate)
+    public Student(string firstName, string lastName, DateTime birthDate, double avgScore) : base($"{firstName} {lastName}", birthDate)
     {
-        this.number = number;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avgScore = avgScore;
@@ -19,10 +18,16 @@ public class Student : Person
     public string FirstName => firstName;
     public string LastName => lastName;
     public double AvgScore => avgScore;
-    public int Number { get; set; }
+
+    public int Number
+    {
+        get => number;
+
+        set => number = value;
+    }
 
     public override string ToString()
     {
-        return $"{number} {firstName} {lastName} {birthDate} {avgScore}";
+        return $"{number} ({id}) {firstName} {lastName} {birthDate} {avgScore}";
     }
 }

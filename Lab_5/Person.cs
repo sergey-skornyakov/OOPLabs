@@ -2,8 +2,8 @@
 
 public class Person
 {
-    private static int id;
-    public static int Id => id;
+    protected int id = 0;
+    public int Id => id;
     public string FullName { get; set; }
     public DateTime BirthDate { get; set; }
     public Person(string fullName, DateTime birthDate)
@@ -11,5 +11,10 @@ public class Person
         FullName = fullName;
         BirthDate = birthDate;
         id = PeopleRegistry.AddPerson(this);
+    }
+
+    public override string ToString()
+    {
+        return $"{id} {FullName} {BirthDate.ToShortDateString()}";
     }
 }

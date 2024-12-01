@@ -2,7 +2,7 @@
 
 public class University
 {
-    private List<Student?> students = [];
+    private List<Student?> students = new List<Student?>();
     private int nextId = 1;
 
     public University()

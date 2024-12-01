@@ -14,8 +14,6 @@ public class Audio : File
         Format = format;
     }
 
-    //TODO: Уникальный метод
-
     public override string ToString()
     {
         return base.ToString() + $" {Duration} {BitRate} {Format}";

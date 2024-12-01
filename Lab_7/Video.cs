@@ -13,8 +13,6 @@ public class Video : File
         FrameRate = frameRate;
     }
 
-    //TODO: Уникальный метод
-
     public override string ToString()
     {
         return base.ToString() + $" {Width}x{Height} {FrameRate}";

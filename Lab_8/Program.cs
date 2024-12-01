@@ -24,7 +24,7 @@ namespace Lab_8
                 Console.WriteLine($"Диагональ прямоугольника: {rectangle.GetDiagonal()}");
             }
 
-            Console.WriteLine(); // Пустая строка для разделения
+            Console.WriteLine();
         }
 
         static void Main(string[] args)
